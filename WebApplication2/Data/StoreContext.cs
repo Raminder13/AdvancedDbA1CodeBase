@@ -8,13 +8,14 @@ namespace WebApplication2.Data
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Brand>().HasKey(b => b.Id);
 
             modelBuilder.Entity<Store>().HasKey(s => s.StoreNumber);
 
             modelBuilder.Entity<Laptop>().HasKey(l => l.Number);
 
             modelBuilder.Entity<LaptopStore>().HasKey(ls => ls.LaptopStoreId);
+
+           
 
             modelBuilder.Entity<LaptopStore>()
                 .HasOne(sl => sl.Laptop)

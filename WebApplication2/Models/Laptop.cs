@@ -37,7 +37,7 @@ namespace WebApplication2.Models
         
         public LaptopCondition Condition { get; set; }
         
-        public int BrandId { get; set; }
+        public Guid BrandId { get; set; }
         
         public Brand Brand { get; set; }
         public HashSet<LaptopStore> laptopStores { get; set; } = new HashSet<LaptopStore>();
